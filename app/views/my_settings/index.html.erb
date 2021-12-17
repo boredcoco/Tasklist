@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Settings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Happiness bar</th>
+      <th>Theme color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_settings.each do |my_setting| %>
+      <tr>
+        <td><%= my_setting.happiness_bar %></td>
+        <td><%= my_setting.theme_color %></td>
+        <td><%= link_to 'Show', my_setting %></td>
+        <td><%= link_to 'Edit', edit_my_setting_path(my_setting) %></td>
+        <td><%= link_to 'Destroy', my_setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My Setting', new_my_setting_path %>

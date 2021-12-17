@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  happiness_bar: 1
+  theme_color: 1
+
+two:
+  happiness_bar: 1
+  theme_color: 1

@@ -1,0 +1,2 @@
+class MySetting < ApplicationRecord
+end

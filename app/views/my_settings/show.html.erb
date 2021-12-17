@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Happiness bar:</strong>
+  <%= @my_setting.happiness_bar %>
+</p>
+
+<p>
+  <strong>Theme color:</strong>
+  <%= @my_setting.theme_color %>
+</p>
+
+<%= link_to 'Edit', edit_my_setting_path(@my_setting) %> |
+<%= link_to 'Back', my_settings_path %>

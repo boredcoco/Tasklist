@@ -1,0 +1,38 @@
+<%= form_with(model: my_setting) do |form| %>
+  <% if my_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(my_setting.errors.count, "error") %> prohibited this my_setting from being saved:</h2>
+
+      <ul>
+        <% my_setting.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :happiness_bar %>
+    <%= form.number_field :happiness_bar, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <br/>
+    <%= form.number_field :color_red, class:"form-control", placeholder:"Amount of red" %>
+  </div>
+
+  <div class="field">
+    <br/>
+    <%= form.number_field :color_blue, class:"form-control", placeholder:"Amount of blue" %>
+  </div>
+
+  <div class="field">
+    <br/>
+    <%= form.number_field :color_green, class:"form-control", placeholder:"Amount of green" %>
+  </div>
+
+  <div class="actions">
+    <br/>
+    <%= form.submit class: "btn btn-dark", style:"background-color: #0D48A2" %>
+  </div>
+<% end %>
